@@ -1,20 +1,76 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Principal</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Menú Principal - Mantención Vehicular</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    {% load static %}
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="text-center">Menú Principal</h1>
-        <p class="text-center">Aquí puedes gestionar las mantenciones de tu vehículo.</p>
-        <div class="text-center mt-4">
-            <a href="#" class="btn btn-secondary">Opción 1</a>
-            <a href="#" class="btn btn-secondary">Opción 2</a>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'main' %}">Mantención Vehicular</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="{% url 'logout' %}" class="nav-link">Cerrar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container text-center">
+        <h1 class="mt-5">Bienvenido</h1>
+        <h3 class="mb-5">Seleccione una opción</h3>
+
+        <div class="row">
+            <!-- Tarjeta para la ingreso de vehículos -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <img src="{% static 'img/mantencion2.jpeg' %}" class="card-img-top" alt="Mantención">
+                    <div class="card-body">
+                        <h5 class="card-title">Ingreso de Vehículos</h5>
+                        <p class="card-text">Gestiona información de vehículos, revisiones, combustible y más.</p>
+                        <a href="{% url 'vehiculos' %}" class="btn btn-primary">Ir a Mantención de Vehículos</a>
+                    </div>
+                </div>
+            </div>            
+
+            <!-- Tarjeta para la mantención de combustibles -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Mantención de Combustibles</h5>
+                        <p class="card-text">Administra los registros de combustible y más.</p>
+                        <a href="{% url 'combustibles' %}" class="btn btn-primary">Ir a Mantención de Combustibles</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta para cálculos -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Cálculos</h5>
+                        <p class="card-text">Realiza cálculos importantes para el mantenimiento del vehículo.</p>
+                        <a href="{% url 'calculos' %}" class="btn btn-primary">Ir a Cálculos</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

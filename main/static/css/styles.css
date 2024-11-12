@@ -1,19 +1,23 @@
-/* main/templates/css/styles.css */
+/* main/static/css/styles.css */
 
+/* Estilos generales */
 body {
-    background-color: #007bff;
-    /* Fondo azul */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #f8f9fa;
     margin: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .container {
     text-align: center;
-    color: white;
-    /* Color del texto blanco para contraste */
+    color: black;
+    margin-top: 100px;
+    /* Espacio para evitar que el contenido esté oculto detrás del navbar */
 }
 
 .login-form {
@@ -23,5 +27,32 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: black;
-    /* Color del texto dentro del formulario */
+}
+
+.card {
+    border-radius: 10px;
+}
+
+/* Estilos específicos para index.html */
+.index-body {
+    background-color: #09035f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.index-body .container {
+    color: white;
+    /* Color del texto blanco */
+}
+
+/* Estilos específicos para login.html */
+.login-body {
+    background-color: #09035f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
