@@ -1,0 +1,27 @@
+/* main/templates/css/styles.css */
+
+body {
+    background-color: #007bff;
+    /* Fondo azul */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    color: white;
+    /* Color del texto blanco para contraste */
+}
+
+.login-form {
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    /* Color del texto dentro del formulario */
+}
