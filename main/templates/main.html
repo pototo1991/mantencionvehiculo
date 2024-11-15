@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Principal - Mantención Vehicular</title>
+    <title>Mantención Vehicular</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    {% load static %}
     <link href="{% static 'css/styles.css' %}" rel="stylesheet">
 </head>
-<body>
+<body class="main-body">
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
         <div class="container-fluid">
@@ -28,42 +27,44 @@
         </div>
     </nav>
 
-    <!-- Contenido principal -->
-    <div class="container text-center">
-        <h1 class="mt-5">Bienvenido</h1>
-        <h3 class="mb-5">Seleccione una opción</h3>
+    <!-- Contenido principal con fondo azul -->
+   <div class="main-content" style="background-color: #09035f; min-height: 100vh; padding-top: 80px;">
+        <div class="container text-center">
+            <h1 class="mt-5" style="color: white;">Bienvenido</h1>
+            <h3 class="mb-5" style="color: white;">Seleccione una opción</h3>
 
-        <div class="row">
-            <!-- Tarjeta para la ingreso de vehículos -->
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm">
-                    <img src="{% static 'img/mantencion2.jpeg' %}" class="card-img-top" alt="Mantención">
-                    <div class="card-body">
-                        <h5 class="card-title">Ingreso de Vehículos</h5>
-                        <p class="card-text">Gestiona información de vehículos, revisiones, combustible y más.</p>
-                        <a href="{% url 'vehiculos' %}" class="btn btn-primary">Ir a Mantención de Vehículos</a>
+
+            <div class="row">
+                <!-- Tarjeta para la ingreso de vehículos -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Ingreso de Vehículos</h5>
+                            <p class="card-text">Gestiona información de vehículos, revisiones, combustible y más.</p>
+                            <a href="{% url 'vehiculos' %}" class="btn btn-primary">Ir a Mantención de Vehículos</a>
+                        </div>
+                    </div>
+                </div>            
+
+                <!-- Tarjeta para la mantención de combustibles -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Mantención de Combustibles</h5>
+                            <p class="card-text">Administra los registros de combustible y más.</p>
+                            <a href="{% url 'combustibles' %}" class="btn btn-primary">Ir a Mantención de Combustibles</a>
+                        </div>
                     </div>
                 </div>
-            </div>            
 
-            <!-- Tarjeta para la mantención de combustibles -->
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Mantención de Combustibles</h5>
-                        <p class="card-text">Administra los registros de combustible y más.</p>
-                        <a href="{% url 'combustibles' %}" class="btn btn-primary">Ir a Mantención de Combustibles</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tarjeta para cálculos -->
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Cálculos</h5>
-                        <p class="card-text">Realiza cálculos importantes para el mantenimiento del vehículo.</p>
-                        <a href="{% url 'calculos' %}" class="btn btn-primary">Ir a Cálculos</a>
+                <!-- Tarjeta para cálculos -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Cálculos</h5>
+                            <p class="card-text">Realiza cálculos importantes para el mantenimiento del vehículo.</p>
+                            <a href="{% url 'calculos' %}" class="btn btn-primary">Ir a Cálculos</a>
+                        </div>
                     </div>
                 </div>
             </div>
